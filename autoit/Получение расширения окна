@@ -1,0 +1,12 @@
+#Include <Misc.au3>
+#Include <WinAPI.au3>
+
+HotKeySet("{F1}","ex")
+
+Opt("MouseCoordMode", 0)   
+
+$hWnd = Winwait("[CLASS:CryENGINE]", "", 500)
+$Width = _WinAPI_GetWindowWidth($hWnd) ;Ширина
+$Height = _WinAPI_GetWindowHeight($hWnd) ;Высота
+
+MsgBox(0, 'Разширение', $Width & ', ' & $Height)
