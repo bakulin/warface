@@ -1,0 +1,19 @@
+#include <EditConstants.au3>;инклуд 
+#include <GUIConstantsEx.au3>;инклуд 
+#include <WindowsConstants.au3>;инклуд 
+HotKeySet("{f1}","coor");назначаем клавишу F1 
+
+While 1 
+    $nMsg = GUIGetMsg() 
+    Switch $nMsg 
+     Case $GUI_EVENT_CLOSE 
+     GUISetState(@SW_HIDE) ;прячем форму 
+    EndSwitch 
+WEnd 
+
+Func coor();при нажатии на F1: 
+$cormouce = MouseGetPos();узнаём позицию курсора 
+$Form1 = GUICreate("Позиция", 327, 38, 192, 124);создаём форму 
+$Input1 = GUICtrlCreateInput($cormouce[0]&","&$cormouce[ 1], 8, 8, 305, 21);вписываем в строку координаты 
+GUISetState(@SW_SHOW);показываем форму 
+EndFunc 
