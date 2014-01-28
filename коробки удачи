@@ -1,0 +1,37 @@
+#Include <Misc.au3>
+HotKeySet("{F1}","ex")
+HotKeySet("{F2}","rdy")
+
+Opt("MouseCoordMode", 0)   
+
+Func ex()
+Exit
+EndFunc
+
+$hWnd = Winwait("[CLASS:CryENGINE]", "", 500)
+While 1
+WinActivate($hWnd)
+Sleep(1000)   
+MouseClick("left", 365, 550, 3) ; 1-ая коробка
+Sleep(7000) 
+MouseClick("left", 365, 550, 3) ; 2-ая коробка
+Sleep(7000) 
+MouseClick("left", 365, 550, 3) ; 3-ья коробка
+Sleep(7000) 
+MouseClick("left", 365, 550, 3) ; 4-ая коробка
+Sleep(7000) 
+MouseClick("left", 365, 550, 3) ; 5-ая коробка
+Sleep(7000)
+MouseClick("left", 520, 550, 3) ;открыть
+Sleep(4000) 
+MouseClick("left", 400, 570, 2) ;принять
+Sleep(1000) 
+WEnd	
+
+Func rdy()
+WinActivate($hWnd)
+Sleep(1000)
+MouseClick("left", 714, 446, 2)
+Sleep(1000)
+EndFunc
+
