@@ -1,7 +1,6 @@
 #Include <Misc.au3>
 HotKeySet("{F1}","ex")
 
-
 Opt("MouseCoordMode", 0)   
 
 Func ex()
