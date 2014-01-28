@@ -1,6 +1,5 @@
 #Include <Misc.au3>
 HotKeySet("{F1}","ex")
-HotKeySet("{F2}","rdy")
 
 Opt("MouseCoordMode", 0)   
 
@@ -27,11 +26,4 @@ Sleep(4000)
 MouseClick("left", 400, 570, 2) ;принять
 Sleep(1000) 
 WEnd	
-
-Func rdy()
-WinActivate($hWnd)
-Sleep(1000)
-MouseClick("left", 714, 446, 2)
-Sleep(1000)
-EndFunc
 
