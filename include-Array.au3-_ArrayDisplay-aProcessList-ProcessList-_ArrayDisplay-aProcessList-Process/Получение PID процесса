@@ -1,0 +1,16 @@
+#include <Array.au3> ; для _ArrayDisplay
+
+; Список всех процессов
+$aProcessList = ProcessList()
+_ArrayDisplay($aProcessList, 'Process/PID') ; функция просмотра массивов
+
+; Список только процессов AutoIt3.exe
+$aProcessList = ProcessList("GAME.exe")
+For $i = 1 To $aProcessList[0][0]
+    MsgBox(4096, $aProcessList[$i][0], $aProcessList[$i][1])
+ Next
+ 
+ $aProcessList = ProcessList("GAMECENTER@MAIL.RU.exe")
+For $i = 1 To $aProcessList[0][0]
+    MsgBox(4096, $aProcessList[$i][0], $aProcessList[$i][1])
+Next
