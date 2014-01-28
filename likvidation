@@ -1,0 +1,49 @@
+#Include <Misc.au3>
+HotKeySet("{F1}","ex")
+
+
+Opt("MouseCoordMode", 0)   
+
+Func ex()
+Exit
+EndFunc
+
+$hWnd = Winwait("[CLASS:CryENGINE]", "", 500)
+
+Sleep(59000) ;1
+WinActivate($hWnd)
+Sleep(72000) ;2
+WinActivate($hWnd)
+Sleep(84000)  ;3
+WinActivate($hWnd)
+Sleep(93000)  ;4
+WinActivate($hWnd)
+Sleep(122000) ;5
+WinActivate($hWnd)
+Sleep(102000) ;6
+WinActivate($hWnd)
+Sleep(118000) ;7
+WinActivate($hWnd)
+Sleep(140000) ;8
+WinActivate($hWnd)
+Sleep(139000) ;9
+WinActivate($hWnd)
+Sleep(162000) ;10
+WinActivate($hWnd)
+Sleep(164000) ;11
+WinActivate($hWnd)
+Sleep(155000) ;12
+WinActivate($hWnd)
+Sleep(170000) ;13
+WinActivate($hWnd)
+Sleep(172000) ;14
+WinActivate($hWnd)
+Sleep(191000) ;15
+WinActivate($hWnd)
+Sleep(185000) ;16
+WinActivate($hWnd)
+Sleep(191000) ;17
+WinActivate($hWnd)
+Sleep(206000) ;18
+WinActivate($hWnd)
+Sleep(1000)  ;19
