@@ -1,0 +1,25 @@
+#Include <Misc.au3>
+HotKeySet("{F1}","ex")
+HotKeySet("{F4}","check")
+
+Opt("MouseCoordMode", 0)   
+
+Func ex()
+Exit
+EndFunc
+
+Func check()
+Local $pos = MouseGetPos()
+MsgBox(0, "Mouse x,y:", $pos[0] & "," & $pos[1])
+EndFunc
+
+$hWnd = Winwait("[CLASS:CryENGINE]", "", 500)
+
+
+WinActivate($hWnd)
+
+While 1
+ControlSend($hWnd, "", "", " ")
+Sleep(50000)
+
+WEnd		
